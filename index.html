@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="script.js"></script> <!-- Corrigido o nome do arquivo de script -->
+</head>
+<body>
+
+<header class="header">
+    <a href="#home" class="logo">Lucas <span>Murari</span></a>
+    <i class="bx bx-menu" id="menu-icon"></i>
+    <nav class="navbar">
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Competências em Tecnologia</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+<section class="home" id="home">
+    <div class="home-content">
+        <h1>Olá, meu nome é <span>Lucas</span></h1>
+        <h3>Estudante de <span>Análise e Desenvolvimento de Sistemas</span> em busca de novos aprendizados</h3>
+        <p>
+          Tenho o objetivo de me tornar um profissional completo, pronto para enfrentar os desafios da era digital, com uma abordagem crítica, habilidades sólidas de resolução de problemas e capacidade de colaborar efetivamente em equipe.</p>
+        <div class="social-icons">
+            <a href="https://github.com/lucasmx21" target ="_blank"><i class="bx bxl-github"></i></a>
+            <a href="https://www.linkedin.com/in/lucas-murari-79241b1b5/" target ="_blank"><i class="bx bxl-linkedin"></i></a>
+            <a href="https://api.whatsapp.com/send?phone=5516982532738" target ="_blank"><i class="bx bxl-whatsapp"></i></a>
+        </div>
+        <div class="btn-group">
+            <a href="curriculo/CV2K24LUCAS.pdf" class="btn" download="CV2K24LUCAS">Download</a>
+            <a href="#contact" class="btn">Contato</a>
+        </div>
+    </div>
+    <div class="home-img">
+        <img src="image.jpg" alt="Foto de um jovem"/>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="about-img">
+        <img src="image.jpg" alt="Foto de um jovem"/>
+    </div>
+    <div class="about-content">
+        <h2>Sobre <span>Mim</span></h2>
+        <p>
+          Olá! me chamo Lucas, um estudante comprometido e apaixonado por tecnologia, com foco em tornar-me um desenvolvedor completo e preparado para as demandas da era digital.<br>
+          <br>
+          Atualmente, estou no último ano do curso de Análise e Desenvolvimento de Sistemas na FATEC, onde adquiri conhecimentos sólidos em análise, projeto e desenvolvimento de sistemas computacionais, com foco em soluções web, mobile e desktop.<br>
+          
+        </p>
+        <a href="#" class="btn">Saiba mais</a>
+    </div>
+</section>
+
+<section class="services" id="services">
+    <h2 class="heading">Competências em Tecnologia</h2>
+    <div class="services-container">
+        <div class="service-box">
+            <div class="service-info">
+                <i class="fab fa-python yellow-icon"></i>
+                <h4>Python</h4>
+                <p>
+                  Python é uma linguagem de programação de alto nível, conhecida por sua sintaxe simples e legibilidade, sendo amplamente utilizada no desenvolvimento web, ciência de dados, automação de tarefas e muito mais. Com Python, é possível criar uma ampla variedade de aplicativos e soluções.
+                </p>
+            </div>
+        </div>
+        <div class="service-box">
+            <div class="service-info">
+                <i class="bx bxl-javascript yellow-icon"></i>
+                <h4>Javascript</h4>
+                <p>
+                  JavaScript é uma linguagem de programação de script amplamente utilizada para tornar as páginas da web interativas e dinâmicas. Com JavaScript, é possível adicionar funcionalidades como validação de formulários, animações, manipulação do DOM e comunicação com APIs.
+                </p>
+
+            </div>
+        </div>
+        <div class="service-box">
+            <div class="service-info">
+                <div class="icon-container">
+                    <i class="fab fa-html5 yellow-icon"></i>
+                    <i class="fab fa-css3-alt yellow-icon"></i>
+                </div>
+                <h4>HTML & CSS</h4>
+                <p>
+                  HTML e CSS são as linguagens básicas para construir e estilizar páginas da web. HTML é usado para estruturar o conteúdo da página, enquanto CSS é usado para estilizá-lo e torná-lo visualmente atraente. Juntas, essas linguagens formam a base de qualquer projeto web.
+
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2 class="heading">Entre em <span>Contato</span></h2>
+    <form id="contact-form" onsubmit="sendEmail(event)">
+        <div class="input-group">
+            <div class="input-box">
+                <input type="text" id="name" placeholder="Nome" required>
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="input-box">
+                <input type="number" id="phone" placeholder="Telefone" required>
+                <input type="text" id="subject" placeholder="Assunto" required>
+            </div>
+        </div>
+        <div class="input-group-2">
+            <textarea id="message" cols="30" rows="10" placeholder="Sua Mensagem" required></textarea>
+            <input type="submit" value="Enviar" class="btn">
+        </div>
+    </form>
+</section>
+
+<footer class="footer">
+    <div class="social-icons">
+        <a href="#"><i class="bx bxl-github"></i></a>
+        <a href="#"><i class="bx bxl-linkedin"></i></a>
+        <a href="#"><i class="bx bxl-whatsapp"></i></a>
+    </div>
+    <ul class="list">
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">Sobre Mim</a></li>
+        <li><a href="#contact">Contato</a></li>
+    </ul>
+    <p class="copyright">© Lucas Murari | Todos os direitos reservados</p>
+</footer>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script src="script.js"></script> <!-- Corrigido o nome do arquivo de script -->
+</body>
+</html>
